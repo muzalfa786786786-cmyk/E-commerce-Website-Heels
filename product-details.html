@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stiletto Heels | Jutti Heels</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- Google Fonts -->
+    <link href="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\fonts.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Jutti Heels</div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-detail-page">
+        <div class="container">
+            <div class="detail-wrapper">
+                <!-- Left: Gallery -->
+                <div class="gallery">
+                    <div class="main-image">
+                        <img id="mainProductImg" src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\1.png" alt="Stiletto Heels">
+                    </div>
+                    <div class="thumbnail-list">
+                        <img src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\1.png" alt="thumb" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\2.png" alt="thumb" class="thumbnail" onclick="changeImage(this)">
+                        <img src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\3.png" alt="thumb" class="thumbnail" onclick="changeImage(this)">
+                        <img src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\4.png" alt="thumb" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- Right: Details -->
+                <div class="product-info">
+                    <h1>Stiletto Heels</h1>
+                    <div class="rating">★★★★★ <span>(128 reviews)</span></div>
+                    <div class="price">
+                        $59.99 <small>$79.99</small>
+                    </div>
+                    <p class="stock in-stock"><i class="fas fa-check-circle"></i> In Stock</p>
+
+                    <!-- Color Selection -->
+                    <div class="option-group">
+                        <label>Color</label>
+                        <div class="color-options">
+                            <span class="color-circle beige" onclick="selectColor(this, 'Beige')"></span>
+                            <span class="color-circle black active" onclick="selectColor(this, 'Black')"></span>
+                            <span class="color-circle navy" onclick="selectColor(this, 'Navy')"></span>
+                            <span class="color-circle mauve" onclick="selectColor(this, 'Mauve')"></span>
+                        </div>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="option-group">
+                        <label>Quantity</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decrementQty()">−</button>
+                            <input type="text" id="quantity" value="1" readonly>
+                            <button class="qty-btn" onclick="incrementQty()">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="addToCartDetails()"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn btn-secondary" onclick="buyNow()"><i class="fas fa-bolt"></i> Buy Now</button>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="description">
+                        <h3>Product Description</h3>
+                        <p>Elegant stiletto heels crafted from premium leather. Features a cushioned insole for all-day comfort and a non-slip sole. Perfect for parties, office, or a night out.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="related">
+                <h2>You May Also Like</h2>
+                <div class="product-grid">
+                    <div class="product-card" data-name="Block Heels" data-price="49.99">
+                        <img src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\img5.png" alt="Block Heels">
+                        <h3>Block Heels</h3>
+                        <p class="price">$49.99</p>
+                        <button class="btn btn-outline add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-name="Wedge Sandals" data-price="44.99">
+                        <img src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\img6.png" alt="Wedge Sandals">
+                        <h3>Wedge Sandals</h3>
+                        <p class="price">$44.99</p>
+                        <button class="btn btn-outline add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-name="Pumps" data-price="54.99">
+                        <img src="C:\Users\Ch AbdulRehman Bajwa\Desktop\Week4\Day25\images\img7.png" alt="Pumps">
+                        <h3>Pumps</h3>
+                        <p class="price">$54.99</p>
+                        <button class="btn btn-outline add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Jutti Heels</h4>
+                    <p>Step into elegance, step into confidence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jutti Heels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
