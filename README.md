@@ -85,4 +85,4 @@ Muzalfa Bibi
 
 ------------------------------------------------------------
 
-⭐ Thank you for reviewing my Week 4 Internship Progress!
+⭐ Thank you for reviewing my Progress!
